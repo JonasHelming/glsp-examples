@@ -55,6 +55,7 @@
 
 	<modules>
 		<module>org.eclipse.glsp.example.workflow</module>
+		<module>org.eclipse.glsp.example.simple</module>
 	</modules>
 
 	<dependencies>

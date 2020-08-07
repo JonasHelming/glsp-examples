@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "browser-app",
+  "name": "workflow-browser-app",
   "version": "0.1.0",
   "dependencies": {
     "@theia/core": "1.0.0",
