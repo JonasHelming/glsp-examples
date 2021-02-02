@@ -51,6 +51,7 @@ import {
     zorderModule
 } from "@eclipse-glsp/client";
 import { Container, ContainerModule } from "inversify";
+import { HeartView, RoundedRectangleView, TextView, TrafficLightView } from "./shape-views";
 
 const minimalDiagramModule = new ContainerModule((bind, unbind, isBound, rebind) => {
     rebind(TYPES.ILogger).to(ConsoleLogger).inSingletonScope();
@@ -58,6 +59,10 @@ const minimalDiagramModule = new ContainerModule((bind, unbind, isBound, rebind)
     const context = { bind, unbind, isBound, rebind };
     configureModelElement(context, 'graph', GLSPGraph, SGraphView);
     configureModelElement(context, 'node', RectangularNode, RectangularNodeView);
+    configureModelElement(context, 'TrafficLight', RectangularNode, TrafficLightView);
+    configureModelElement(context, 'RoundedRectangle', RectangularNode, RoundedRectangleView);
+    configureModelElement(context, 'Diamond', RectangularNode, TextView);
+    configureModelElement(context, 'Heart', RectangularNode, HeartView);
 });
 
 export default function createContainer(widgetId: string): Container {

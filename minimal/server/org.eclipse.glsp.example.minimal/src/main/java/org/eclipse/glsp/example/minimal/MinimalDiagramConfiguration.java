@@ -35,7 +35,7 @@ public class MinimalDiagramConfiguration implements DiagramConfiguration {
 
    @Override
    public List<ShapeTypeHint> getNodeTypeHints() {
-      return List.of(new ShapeTypeHint(DefaultTypes.NODE, true, true, true, false));
+      return List.of(new ShapeTypeHint(DefaultTypes.NODE, true, true, true, false), new ShapeTypeHint("Heart", true, true, true, false));
    }
 
    @Override

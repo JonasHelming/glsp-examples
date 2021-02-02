@@ -24,22 +24,22 @@ import org.eclipse.glsp.graph.builder.impl.GNodeBuilder;
 import org.eclipse.glsp.server.model.GModelState;
 import org.eclipse.glsp.server.operations.gmodel.CreateNodeOperationHandler;
 
-public class MinimalCreateNodeOperationHandler extends CreateNodeOperationHandler {
+public class TrafficLightCreateNodeOperationHandler extends CreateNodeOperationHandler {
 
-   public MinimalCreateNodeOperationHandler() {
-      super(DefaultTypes.NODE);
+   public TrafficLightCreateNodeOperationHandler() {
+      super("TrafficLight");
    }
 
    @Override
    protected GNode createNode(final Optional<GPoint> point, final GModelState modelState) {
-      GNodeBuilder builder = new GNodeBuilder(DefaultTypes.NODE)
-         .size(240, 120)
-         .addCssClass("minimal-node");
+      GNodeBuilder builder = new GNodeBuilder("TrafficLight")
+         .size(40, 20)
+         .addCssClass("trafficlight-node");
       point.ifPresent(builder::position);
       return builder.build();
    }
 
    @Override
-   public String getLabel() { return "Cube"; };
+   public String getLabel() { return "Traffic Light"; }
 
 }

@@ -24,22 +24,22 @@ import org.eclipse.glsp.graph.builder.impl.GNodeBuilder;
 import org.eclipse.glsp.server.model.GModelState;
 import org.eclipse.glsp.server.operations.gmodel.CreateNodeOperationHandler;
 
-public class MinimalCreateNodeOperationHandler extends CreateNodeOperationHandler {
+public class RoundedRectangleCreateNodeOperationHandler extends CreateNodeOperationHandler {
 
-   public MinimalCreateNodeOperationHandler() {
-      super(DefaultTypes.NODE);
+   public RoundedRectangleCreateNodeOperationHandler() {
+      super("RoundedRectangle");
    }
 
    @Override
    protected GNode createNode(final Optional<GPoint> point, final GModelState modelState) {
-      GNodeBuilder builder = new GNodeBuilder(DefaultTypes.NODE)
-         .size(240, 120)
-         .addCssClass("minimal-node");
+      GNodeBuilder builder = new GNodeBuilder("RoundedRectangle")
+         .size(180, 100)
+         .addCssClass("RoundedRectangle-node");
       point.ifPresent(builder::position);
       return builder.build();
    }
 
    @Override
-   public String getLabel() { return "Cube"; };
+   public String getLabel() { return "Rounded Rectangle"; }
 
 }

@@ -17,6 +17,10 @@ package org.eclipse.glsp.example.minimal;
 
 import org.eclipse.glsp.example.minimal.handler.MinimalCreateNodeOperationHandler;
 import org.eclipse.glsp.server.di.DefaultGLSPModule;
+import org.eclipse.glsp.example.minimal.handler.TrafficLightCreateNodeOperationHandler;
+import org.eclipse.glsp.example.minimal.handler.DiamondCreateNodeOperationHandler;
+import org.eclipse.glsp.example.minimal.handler.HeartCreateNodeOperationHandler;
+import org.eclipse.glsp.example.minimal.handler.RoundedRectangleCreateNodeOperationHandler;
 import org.eclipse.glsp.server.diagram.DiagramConfiguration;
 import org.eclipse.glsp.server.features.core.model.JsonFileModelFactory;
 import org.eclipse.glsp.server.features.core.model.ModelFactory;
@@ -34,6 +38,10 @@ public class MinimalGLSPModule extends DefaultGLSPModule {
    protected void configureOperationHandlers(final MultiBinding<OperationHandler> binding) {
       super.configureOperationHandlers(binding);
       binding.add(MinimalCreateNodeOperationHandler.class);
+      binding.add(TrafficLightCreateNodeOperationHandler.class);
+      binding.add(HeartCreateNodeOperationHandler.class);
+      binding.add(DiamondCreateNodeOperationHandler.class);
+      binding.add(RoundedRectangleCreateNodeOperationHandler.class);
    }
 
    @Override

@@ -59,3 +59,54 @@ svg {
     font-size: 14pt;
     text-anchor: middle;
 }
+
+.sprotty-node.task.automated {
+    fill: lightblue
+}
+
+.sprotty-node.heart {
+    fill: red;
+    background-size: 120px 120px;
+}
+
+.small { font: 30px sans-serif; }
+.heavy { font: bold 30px sans-serif; fill: red; }
+
+/* Note that the color of the text is set with the    *
+ * fill property, the color property is for HTML only */
+.Rrrrr { font: bold 40px arial;  }
+
+.traffic-lights--red {
+      animation: color-red 8s linear infinite;
+    }
+.traffic-lights--yellow {
+      animation: color-yellow 8s linear infinite;
+    }
+.traffic-lights--green {
+      animation: color-green 8s linear infinite;
+    }
+  @keyframes color-red {
+    0% {   fill: #420000; }
+    2%,
+    40% {  fill: #F70000; }
+    42%,
+    100% { fill: #420000; }
+  }
+  @keyframes color-yellow {
+    0%,
+    20% {   fill: #2F2C00; }
+    22%,
+    40% {   fill: #F7EB00; }
+    42%,
+    80% {   fill: #2F2C00; }
+    82%,
+    100% {  fill: #F7EB00; }
+  }
+  @keyframes color-green {
+    0%,
+    40% {  fill: #001800; }
+    42%,
+    80% {   fill: #009F00; }
+    82%,
+    100% { fill: #001800; }
+  }
